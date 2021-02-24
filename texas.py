@@ -14,4 +14,17 @@ for val, suit in cards:
 
 
 def deal_one_card():
-    pass
+    rand_card = random.choice(deck)
+    print(rand_card)
+    deck.remove(rand_card) # removes card from deck       
+    
+
+def deal_two_cards():
+    for _ in range(2):
+        deal_one_card()
+
+def deal_3_cards():
+    for _ in range(3):
+        deal_one_card()
+
+
