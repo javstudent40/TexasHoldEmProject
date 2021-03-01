@@ -1,5 +1,13 @@
 import random
 import itertools
+from helpers import *
+
+pot = 0
+player_chips = 1000
+computer_chips = 1000
+player_hand = []
+computer_hand = []
+game_over = False
 
 #create deck of cards
 deck = []
@@ -13,19 +21,6 @@ for val, suit in cards:
     deck.append(card)
 
 
-def deal_one_card():
-    rand_card = random.choice(deck)
-    print(rand_card)
-    deck.remove(rand_card) # removes card from deck       
-    
-
-def deal_two_cards():
-    for _ in range(2):
-        deal_one_card()
-
-def deal_3_cards():
-    for _ in range(3):
-        deal_one_card()
 
 #deal two cards to player 1
 print("Player 1 cards:")
@@ -38,6 +33,10 @@ print("Computer cards:")
 deal_two_cards()
 print("")
 print("")
+
+#first betting round
+bet()
+
 
 #deal flop
 print("The flop is:")
